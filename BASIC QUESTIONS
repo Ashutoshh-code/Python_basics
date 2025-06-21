@@ -45,3 +45,46 @@ if (year % 4 == 0):
         print(f"{year} is a leap year.")
 else:
     print(f"{year} is not a leap year.")
+
+
+Q7) Check whether a number is prime or not.
+
+# Take input from user
+num = int(input("Enter a number: "))
+# Check if number is greater than 1
+if num > 1:
+    # Check for factors
+    for i in range(2, int(num ** 0.5) + 1):
+        if (num % i) == 0:
+            print(f"{num} is not a prime number.")
+            break
+    else:
+        # If no factors found
+        print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")
+
+Q8) Given a range of numbers, find all the prime numbers within that range.
+
+# Function to check if a number is prime
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Take input from user
+start = int(input("Enter the start of range: "))
+end = int(input("Enter the end of range: "))
+
+print(f"Prime numbers between {start} and {end} are:")
+
+# Loop through range and print primes
+for num in range(start, end + 1):
+    if is_prime(num):
+        print(num, end=" ")
+
+
+Q9) 
